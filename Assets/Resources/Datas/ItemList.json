@@ -1,0 +1,40 @@
+{
+  "tempInfoList": [
+    {
+      "itemIdx": 0,
+      "itemLevel": 30,
+      "itemName": "No Pain No Gain",
+      "category": "Equipment"
+    },
+    {
+      "itemIdx": 1,
+      "itemLevel": 35,
+      "itemName": "Plask Syutaine",
+      "category": "Equipment"
+    },
+    {
+      "itemIdx": 2,
+      "itemLevel": 40,
+      "itemName": "The Light Sword of Death Eye",
+      "category": "Equipment"
+    },
+    {
+      "itemIdx": 3,
+      "itemLevel": 45,
+      "itemName": "Ne",
+      "category": "Equipment"
+    },
+    {
+      "itemIdx": 4,
+      "itemLevel": 50,
+      "itemName": "Zyuno",
+      "category": "Equipment"
+    },
+    {
+      "itemIdx": 5,
+      "itemLevel": 55,
+      "itemName": "Peuragarah",
+      "category": "Equipment"
+    }
+  ]
+}

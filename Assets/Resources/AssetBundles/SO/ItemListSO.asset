@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe5c638c3058f9c479e57e764bda8409, type: 3}
+  m_Name: ItemListSO
+  m_EditorClassIdentifier: 
+  itemList:
+    tempInfoList:
+    - itemIdx: 0
+      itemLevel: 30
+      itemName: No Pain No Gain
+      category: Equipment
+    - itemIdx: 1
+      itemLevel: 35
+      itemName: Plask Syutaine
+      category: Equipment
+    - itemIdx: 2
+      itemLevel: 40
+      itemName: The Light Sword of Death Eye
+      category: Equipment
+    - itemIdx: 3
+      itemLevel: 45
+      itemName: Ne
+      category: Equipment
+    - itemIdx: 4
+      itemLevel: 50
+      itemName: Zyuno
+      category: Equipment
+    - itemIdx: 5
+      itemLevel: 55
+      itemName: Peuragarah
+      category: Equipment
