@@ -2,7 +2,7 @@
 
 > Resources.Load() 를 이용한 Scriptable Object 10000개 Load
 
-> BinaryFormatter.Deserialize()를 이용한 Binary File 10000개 Load
+> BinaryFormatter.Deserialize()를 이용한 Binary File 10000개 파싱 및 Load
 
 비교하기
 
