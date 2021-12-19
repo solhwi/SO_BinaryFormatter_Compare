@@ -11,7 +11,10 @@ public class ScriptManager
     {
         get
         {
-            itemList = itemList ?? itemList;
+            if(itemList == null)
+            {
+                
+            }
 
             itemList = Managers.Resources.LoadSO<ItemListSO>("ItemListSO");
             return itemList;
@@ -21,9 +24,10 @@ public class ScriptManager
     {
         get
         {
-
-            itemListBinary = itemListBinary ?? Managers.Resources.LoadSO<ItemListBinary>("ItemListBinary");
-
+            if(itemListBinary == null)
+            {
+                itemListBinary = Managers.Resources.LoadSO<ItemListBinary>("ItemListBinary");
+            }
 
             itemListBinary.itemList = Managers.Resources.LoadBinary<ItemList>("ItemListBinary.txt");
             return itemListBinary;

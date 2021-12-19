@@ -18,7 +18,7 @@ public class ItemListBinary : ScriptParser
         ItemList list = Parser<ItemList>("Datas/ItemList");
 
         BinaryFormatter formatter = new BinaryFormatter();
-        FileStream fs = new FileStream($"{Application.dataPath}/Resources/AssetBundles/Binary/ItemListBinary.txt", FileMode.Create);
+        FileStream fs = new FileStream($"{Application.dataPath}/AssetBundles/Binary/ItemListBinary.txt", FileMode.Create);
         formatter.Serialize(fs, list);
 
         fs.Close();

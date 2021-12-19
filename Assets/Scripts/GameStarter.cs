@@ -8,7 +8,7 @@ public class GameStarter : MonoBehaviour
     {
         for (int i = 0; i < 10000; i++)
         {
-            var info = Managers.Scripts.ItemList.GetInfo(i);
+            var info = Managers.Scripts.ItemList?.GetInfo(i);
             Debug.Log(info?.itemName);
         }
     }
