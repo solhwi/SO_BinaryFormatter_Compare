@@ -10,4 +10,8 @@
 
 하지만
 
-1. 회사 것이 BinaryFormatter.Deserialize()보다 빠를 수 있음
+System.IO.File.ReadAllBytes(file_name); ㅡ> byte
+
+Encoding.UTF8.GetString(_binary); ㅡ> string
+
+로 Deserialize 코드를 변경해야합니다.
