@@ -5,31 +5,26 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Runtime.Serialization;
 using UnityEngine.Networking;
+using System.Text;
 
 public class ResourceManager
 {
     public AssetBundle bundle { get; set; }
 
-    public void Init()
-    {
-
-    }
-
     public T LoadSO<T>(string path) where T : ScriptableObject
     {
         return bundle.LoadAsset<T>($"{path}");
-        //return Resources.Load<T>($"{path}");
     }
 
-    public T LoadBinary<T>(string path) where T : class
-    {
-        FileStream fs = new FileStream($"{Application.dataPath}/AssetBundles/Binary/{path}", FileMode.Open);
-        BinaryFormatter formatter = new BinaryFormatter();
+    public string LoadBinary(string path)
+    { 
+        string fullPath = $"{Application.dataPath}/AssetBundles/Binary/{path}";
 
-        T data = formatter.Deserialize(fs) as T;
-
-        fs.Close();
+        byte[] binaryData = File.ReadAllBytes(fullPath);
+        string data = Encoding.UTF8.GetString(binaryData);
 
         return data;
     }
 }
+
+
