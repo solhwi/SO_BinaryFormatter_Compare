@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class GameStarter : MonoBehaviour
 {
@@ -22,8 +23,23 @@ public class GameStarter : MonoBehaviour
         }
     }
 
+    public void LoadAssetBundle()
+    {
+        StartCoroutine(LoadCoroutine());
+    }
+
     IEnumerator LoadCoroutine()
     {
-        yield return null;
+        UnityWebRequest www = UnityWebRequestAssetBundle.GetAssetBundle("C:/ScriptParse/Assets/AssetBundles/manifest");
+        yield return www.SendWebRequest();
+
+        if (www.result != UnityWebRequest.Result.Success)
+        {
+            Debug.Log(www.error);
+        }
+        else
+        {
+            Managers.Resources.bundle = DownloadHandlerAssetBundle.GetContent(www);
+        }
     }
 }
