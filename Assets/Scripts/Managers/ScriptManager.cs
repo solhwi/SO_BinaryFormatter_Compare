@@ -5,7 +5,7 @@ using UnityEngine;
 public class ScriptManager
 {
     ItemListSO itemList;
-    ItemListBinary itemListBinary;
+    ItemListBinarySO itemListBinary;
 
     public ItemListSO ItemList
     {
@@ -20,16 +20,17 @@ public class ScriptManager
             return itemList;
         }
     }
-    public ItemListBinary ItemListBinary
+    public ItemListBinarySO ItemListBinary
     {
         get
         {
             if(itemListBinary == null)
             {
-                itemListBinary = Managers.Resources.LoadSO<ItemListBinary>("ItemListBinary");
+                itemListBinary = Managers.Resources.LoadSO<ItemListBinarySO>("ItemListBinary");
             }
 
-            itemListBinary.itemList = Managers.Resources.LoadBinary<ItemList>("ItemListBinary.txt");
+            string data = Managers.Resources.LoadBinary("ItemListBinary.txt");
+            itemListBinary.MakeItemList(data);
             return itemListBinary;
         }
     }
